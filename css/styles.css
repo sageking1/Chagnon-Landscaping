@@ -18,6 +18,81 @@ header {
     
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 5px;
+    width: 30px;
+    background-color: #D4D6CF;
+    margin: 6px 0;
+    display: block;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+@media (max-width: 320px) {
+    .banner {
+        display: none;
+    }
+
+    .menu {
+        display: none; /* Hide the menu on small screens */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .menu.show {
+        display: flex; /* show the menu when the class 'show' is added */
+    }
+
+    .menu-toggle {
+        display: flex; /* show the menu toggle on small screens */
+    }
+
+    .menu li {
+        margin: 15px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+
+
+}
+
+@media (max-width: 1024px) {
+
+
+}
+
 
 .logo {
     float: left;
@@ -33,46 +108,10 @@ header {
     left: 50px;
 }
 
-.banner title {
-    text-align: center;
-}
-
-.banner h1 {
-    font-size: 24px;
-    text-align: center;
-}
-
 .banner p {
     font-size: 16px;
     text-align: center;
 }
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav li{
-    display: inline-block;
-    margin-right: 30px;
-}
-
-nav a{
-    text-decoration: none;
-    color: #474747;
-}
-
-main {
-    padding: 15px;
-}
-
-.logo img {
-    object-fit: contain;
-
-}
-
 
 footer {
     background-color: #D4D6CF;
